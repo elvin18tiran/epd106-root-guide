@@ -1,0 +1,5 @@
+# device images / signed zips / apks are unit-specific or large — don't commit blobs
+*.img
+*.apk
+*.zip
+work/
