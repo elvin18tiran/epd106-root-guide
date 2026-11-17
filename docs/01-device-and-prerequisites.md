@@ -27,15 +27,15 @@ adb shell ls -l /dev/block/by-name
 |---|---|---|
 | **ADB + Fastboot** (platform-tools) | talk to the device | `adb devices` must show your reader |
 | **JDK or JRE 8** | `signapk` reaches into `sun.security.pkcs`, removed in JDK 9+ | a plain **JRE 8** is enough |
-| **Python 3** | build zips, patch images, render the sleep screen, pinyin | |
+| **Python 3** | build zips, patch images, render the sleep screen | |
 | **aapt2** | build the RRO overlay (sleep screen) | from Google Maven: `com/android/tools/build/aapt2/<ver>/aapt2-<ver>-windows.jar` (the jar contains `aapt2.exe`) |
 | **Magisk app APK** | the root engine | use **v28.1** (known-good here): `github.com/topjohnwu/Magisk/releases` |
 | **git / curl / unzip** | fetch toolkits | |
 
-Python packages (for the optional features):
+Python package (for rendering the sleep-screen image):
 
 ```bash
-pip install pypinyin beautifulsoup4 lxml opencc-python-reimplemented pillow
+pip install pillow
 ```
 
 ## The device-specific toolkit
