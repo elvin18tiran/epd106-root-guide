@@ -7,5 +7,6 @@
 | `patch_framework.py` | in-place swap of STORED PNGs in an APK with CRC fix-up (⚠ Magisk-module use bricks the EPD106) | [04](../docs/04-sleep-screen.md) |
 | `render_sleep.py` | render the 758×1024 grayscale "lost & found" sleep image (Literata) | [04](../docs/04-sleep-screen.md) |
 | `render_scene.py` | render a sleep image: contact header on top + a framed artwork below (for the rotating gallery) | [04](../docs/04-sleep-screen.md) |
+| `render_boot.py` | render boot-animation frames: branded logo + dot loader + walking cat | [06](../docs/06-power-tweaks.md) |
 
 These are reference implementations from a real session; read before running and adapt paths.

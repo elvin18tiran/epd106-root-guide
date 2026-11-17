@@ -2,7 +2,8 @@
 
 A complete, field-tested A-to-Z guide to **rooting, de-bloating, and customizing** the
 Xiaomi MiReader 1st-gen / Moaan e-reader (model **EPD106**, Allwinner B300, Android 8.1) —
-including a **custom "lost & found" sleep screen** with rotating public-domain artwork.
+including a **custom "lost & found" sleep screen** with rotating artwork, a **custom boot
+animation**, a **system font swap**, **e-ink tuning**, and **framework overlay theming**.
 
 > Written for both humans and AI agents. Every step here was actually performed on a real
 > device, including one **brick-and-recovery** that is documented so you can avoid (or survive) it.
@@ -50,6 +51,7 @@ no PhoenixSuit.
 | [03 — Backup & recovery](docs/03-backup-and-recovery.md) | What to back up, the stock-boot restore zip, and the **"boot-window race"** that un-bricks a bad Magisk module |
 | [04 — Custom sleep screen](docs/04-sleep-screen.md) | The **safe** method (static RRO overlay) + the **bricking** method to avoid |
 | [05 — Debloat & KOReader](docs/05-debloat-and-koreader.md) | The 28-package debloat (reversible) and a Kindle-like KOReader setup |
+| [06 — Power tweaks](docs/06-power-tweaks.md) | What root buys you: e-ink tuning, telemetry block, system font swap, custom boot animation, framework overlay theming |
 
 Scripts referenced by the guides live in [`scripts/`](scripts/).
 
@@ -65,10 +67,17 @@ changing screensaver (contact info shown here as placeholders):
 
 ![Magisk app showing root](docs/images/root-magisk.png)
 
+**Custom boot animation** — a branded logo, a dot loader, and a little walking cat (758×1024,
+e-ink; name shown as a placeholder):
+
+![Boot animation frames](docs/images/boot-animation.png)
+
 ## Credits
 
 - Root method & toolkit: **[delbertbeta/edp106](https://github.com/delbertbeta/edp106)**
   (and the sister project [qwerty12/inkPalm-5-EPD105-root](https://github.com/qwerty12/inkPalm-5-EPD105-root)).
 - [Magisk](https://github.com/topjohnwu/Magisk) by topjohnwu.
 - [KOReader](https://github.com/koreader/koreader),
-  [Literata](https://github.com/googlefonts/literata), [Simple Keyboard](https://github.com/rkkr/simple-keyboard).
+  [Literata](https://github.com/googlefonts/literata), [Simple Keyboard](https://github.com/rkkr/simple-keyboard),
+  [Atkinson Hyperlegible](https://github.com/googlefonts/atkinson-hyperlegible).
+- Public-domain artwork from [Wikimedia Commons](https://commons.wikimedia.org) (Hokusai, Hiroshige).
