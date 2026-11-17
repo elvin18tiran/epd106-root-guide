@@ -8,6 +8,10 @@ animation**, a **system font swap**, **e-ink tuning**, and **framework overlay t
 > Written for both humans and AI agents. Every step here was actually performed on a real
 > device, including one **brick-and-recovery** that is documented so you can avoid (or survive) it.
 
+> 🔰 **New to this? Never used ADB?** Start with the **[Beginner's Walkthrough](docs/00-beginner-walkthrough.md)** —
+> a gentle, explains-everything, step-by-step path from a fresh PC to a rooted reader. The docs below
+> (01–06) are the terser reference.
+
 ---
 
 ## ⚠️ Read this first
@@ -46,6 +50,7 @@ no PhoenixSuit.
 
 | Guide | What it covers |
 |---|---|
+| 🔰 [00 — Beginner's walkthrough](docs/00-beginner-walkthrough.md) | **New here? Start here.** Hand-holding, explains-everything path — PC setup, concepts, backup, rooting, un-bricking — for someone who's never used ADB |
 | [01 — Device & prerequisites](docs/01-device-and-prerequisites.md) | Tools you need (ADB, JDK/JRE 8, Python, aapt2), how to confirm your device matches |
 | [02 — Rooting](docs/02-rooting.md) | The full root method: dump → patch your own boot → sign → sideload → Magisk setup |
 | [03 — Backup & recovery](docs/03-backup-and-recovery.md) | What to back up, the stock-boot restore zip, and the **"boot-window race"** that un-bricks a bad Magisk module |
