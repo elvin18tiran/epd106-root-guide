@@ -62,6 +62,33 @@ waste time on it.
 adb shell su -c "mount -o rw,remount /vendor; rm /vendor/overlay/sleepoverlay.apk; sync" && adb reboot
 ```
 
+## 🎞️ Rotating gallery (auto-changing screensaver)
+
+The device **auto-rotates** `my_wallpaper_index` on each sleep, so if you give each `photoN` a
+*different* image, the stock rotation becomes a changing screensaver — no extra logic needed. Put
+your fixed contact header on top of each image and a different artwork below:
+
+```
+res/drawable-sw572dp-hdpi/
+  photo1.png = scene A    photo2.png = scene B    photo3.png = scene C    photo4.png = scene D
+  photo2_charging.png = B  photo3_charging.png = C  photo4_charging.png = D
+```
+
+`scripts/render_scene.py` composites one scene (contact header on top, artwork framed below with a
+caption). Good source for public-domain, e-ink-friendly art: **Wikimedia Commons** — ukiyo-e
+woodblock landscapes (Hokusai/Hiroshige) and old engravings have bold outlines that shine in B&W.
+Query the Commons API with an honest `User-Agent` (do **not** spoof a browser), filter
+`extmetadata.LicenseShortName` for "public domain", convert to grayscale, and boost contrast.
+
+Build/sign/install exactly as the single-image overlay above (same 7 `photoN` slots, just distinct
+images). Verified on-device: the image **changes every sleep** automatically. One practical quirk —
+the system's rotation reliably cycles **3** of the four slots; `photo1` is picked rarely, so treat
+it as a bonus slot and put your three favorite scenes in `photo2`–`photo4`.
+
+> Testing tip: the sleep logo is **cached**, so rapidly setting `my_wallpaper_index` and
+> screenshotting gives unreliable (stale/ghosted) results. Test with **natural sleep cycles**
+> (leave the setting at `null`) a few seconds apart, or reboot to clear the cache.
+
 ## ❌ The method that BRICKS this device (DON'T)
 
 Replacing `framework-res.apk` via a **Magisk module** (`/data/adb/modules/.../system/framework/
